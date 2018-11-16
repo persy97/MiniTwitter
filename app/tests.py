@@ -116,7 +116,6 @@ class AccountTests(APITestCase):
             response_content = response.content.decode("utf-8")
 
         response_content = ast.literal_eval(response_content)
-        print(response_content['status'])
         self.assertEqual(response_content['status'], 405)
 
     """     Testing /tweet endpoint"""
